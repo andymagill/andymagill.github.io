@@ -1,0 +1,250 @@
+/*
+	Andrew Magill's Personal Website "Greetings Earthlings" CSS document
+	Author: Andrew Magill
+*/
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  min-height: 100%;
+  margin: 0;
+}
+
+body {
+	background: url(../img/wood-lg.jpg) no-repeat top center fixed #2f313d;
+	color: #F8FAEF;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+	font-size: 16px;
+	text-align: center;
+}
+.wrapper {
+	margin: 0 auto;
+	max-width: 980px;
+	width: 100%;
+	padding: 0 20px;
+	text-align: left;
+}
+.title {
+	float: left;
+	margin-top: 30px;
+	width: 65%;
+}
+h1, h2 , h3 {
+	font-family: 'Roboto Slab', serif;
+	font-weight: normal;
+	margin: 0;
+	text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.75);
+}
+h1 {
+	font-size: 67px;
+	font-weight: 300;
+}
+h2 {
+	font-size: 20px;
+}
+nav {
+	float: right;
+	margin-top: 62px;
+}
+nav a {
+	border: 4px solid #F8FAEF;
+	background-color: rgba(0,0,0,0);
+	color: #F8FAEF;
+	display: block;
+	float: left;
+	font-size: 18px;
+	font-weight: 500;
+	padding: 8px 20px;
+	margin: 0 15px 0 0;
+	transition: .4s;
+	text-decoration: none;
+}
+nav a:hover {
+	background-color: rgba(0, 0, 0, .5);
+	transition: .4s;
+}
+.welcome {
+	clear: both;
+	padding: 25px 0;
+	font-size: 20px;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+	line-height: 170%;
+}
+.portfolio {
+
+}
+.portfolio h3 {
+	margin-bottom: 20px;
+	font-size: 30px;
+}
+.portfolio_item {
+	float:left;
+	width:22%;
+	margin-right: 3%;
+	text-align: center;
+	transition: .2s;
+	margin-bottom: 15px;
+}
+.portfolio_item.last {
+	margin-right: 0;
+}
+.portfolio_item img {
+	width:100%;
+	border: 12px double #F8FAEF;
+}
+.portfolio_item a {
+	width:100%;
+	text-decoration: none;
+	color: #F8FAEF;
+}
+.portfolio_item span {
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.75);
+	font-weight: 500;
+}
+.portfolio_item:hover {
+	width:24%;
+	transition: .2s;
+	margin: -6px 2% 0 -1%;
+}
+.portfolio_item.last:hover {
+	margin-right: 0;
+}
+.spotlight {
+	clear: both;
+/*	position: relative;
+*/	border-top: 4px solid #F8FAEF;
+	/*height: 0;*/
+}
+.spotlight_item {
+	display: none;
+	position: relative;
+	top: 0;
+	overflow: hidden;
+}
+.spotlight_item span {
+	display: block;
+	font-family: 'Roboto Slab', serif;
+	font-weight: normal;
+	font-size: 23px;
+	margin: 20px 0;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.75);
+}
+.spotlight_item p {
+	text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.9);
+	width: 50%;
+}
+.spotlight_item a {
+	display: block;
+	color: #F8FAEF;
+	font-size: 17px;
+	font-weight: normal;
+	text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.75);
+}
+.spotlight_image{
+	text-align: center;
+	margin-top: 20px;
+}
+.spotlight_image img{
+	width: 90%;
+	margin: 0 auto;
+}
+.quotes {
+	text-align: center;
+	margin-top: 40px;
+}
+.quotes blockquote {
+	display: none;
+}
+.quotes blockquote:nth-child(1) {
+	display: block;
+}
+.quotes blockquote p {
+	font-style: italic;
+}
+.email {
+	text-align: center;
+	clear:both;
+	padding-top: 20px;
+}
+.email_inner {
+	width: 250px;
+	margin: 0 auto;
+	text-align: left;
+}
+.email .email_intro {
+	font-family: 'Roboto Slab', serif;
+	font-weight: normal;
+	font-size: 16px;
+	margin-bottom: 5px;
+	text-align: center;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.75);
+}
+.email input , textarea {
+	background: rgba(256, 256, 256, .75);
+	border: 4px solid transparent;
+	color: #000;
+	display: block;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	margin: 5px 0;
+	outline: none;
+	padding: 8px 10px;
+	width: 100%;
+
+	-ms-box-sizing:content-box;
+	-moz-box-sizing:content-box;
+	-webkit-box-sizing:content-box; 
+	box-sizing:content-box;
+}
+.email input:focus , textarea:focus {
+	border: 4px solid #F8FAEF;
+}
+.email textarea {
+	resize: none;
+}
+.email .send {
+	background-color: transparent;
+	border: 4px solid #F8FAEF;
+	color: #F8FAEF;
+	font-family: 'Roboto', sans-serif;
+	font-size: 18px;
+	padding: 6px 10px;
+	font-weight: normal;
+	cursor: pointer;
+	transition: .4s;
+}
+.email .send:hover {
+	background-color: rgba(0, 0, 0, .2);
+	transition: .4s;
+}
+
+::-webkit-input-placeholder {  
+   color: #7F7F89;  
+}
+:-moz-placeholder {  
+   color: #7F7F89;  
+}
+::-moz-placeholder {  
+   color: #7F7F89;  
+}
+:-ms-input-placeholder {  
+   color: #7F7F89;  
+}
+::selection {
+  background-color: #597589; 
+  color: #FFF;
+}
+::-moz-selection {
+  background-color: #597589; 
+  color: #FFF;
+}
