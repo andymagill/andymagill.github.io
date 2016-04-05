@@ -7,7 +7,9 @@
 		<meta name="viewport" content="width=device-width">
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.15.0/jquery.validate.min.js"></script>
 		<script src="js/main.js"></script>
+
 		<link href='https://fonts.googleapis.com/css?family=Roboto:300,400|Roboto+Slab:300,400' rel='stylesheet' type='text/css'>
 		<link href="css/style.css" rel="stylesheet" type="text/css">
 
@@ -34,13 +36,12 @@
 
 			<nav>
 				<a href="docs/resume-andrew-magill-160402.pdf">resume</a>
-				<a href="#contact">contact</a>
 			</nav>
 		</header>
 
 		<div class="content">
 			<section class="welcome">
-				<p>Greetings Earthlings! I am a front-end developer and web designer.  I built this page to showcase some of my work. I'm currently working at L'Occitane, a cosmetics manufaturer and retailer, building and maintaining their ecommerce websites and supporting our online marketing operations. </p>
+				<p>Greetings Earthlings! I am a front-end developer and web designer.  I built this page to showcase some of my work. I'm currently employed at L'Occitane, a cosmetics manufaturer and retailer, building and maintaining their ecommerce websites and supporting our online marketing operations. </p>
 			</section>
 
 			<section class="portfolio">
@@ -65,34 +66,34 @@
 				</div>
 
 				<div class="spotlight">
-					<div class="spotlight_item" data-height="800">
+					<div class="spotlight_item">
 						<span>L'Occitane Group Corporate Site</span>
-						<p>This site communicates corporate information to prospective investors and job applicants.  ASP .Net C# is used for it's multi-lingual features and dynamic linking to financial documents.</p>
+						<p>This site contains corporate information to prospective investors and job applicants.  ASP .Net C# is used for the site's multi-lingual features and dynamic linking to financial documents, which are maintained by non-technical associates. </p>
 						<a href="http://www.loccitane.com/group/home.aspx?l=en">L'Occitane Group</a>
 						<div class="spotlight_image">
 							<img src="img/portfolio-group-site.png" alt="">
 						</div>
 					</div>
 
-					<div class="spotlight_item" data-height="800">
+					<div class="spotlight_item">
 						<span>Unified Checkout Process</span>
-						<p></p>
+						<p>The goal of this project was to unify the code base of all our checkout processes for all brands in the L'Occitane Group.  Currently 5 brands and dozens of websites use the same code base from a single location on the platform's file structure. </p>
 						<div class="spotlight_image">
 							<img src="img/portfolio-checkout-1.png" alt="">
 						</div>
 					</div>
 
-					<div class="spotlight_item" data-height="800">
+					<div class="spotlight_item">
 						<span>Email Newsletter Production Tool</span>
-						<p></p>
+						<p>This project was intended to provide marketing associates the ability to generate HTML emails without the assistance of a developer or 3rd party service. PHP and MySQL serves as the backend which stored email content, generated the HTML emails, and authenticated users from our main CMS platform. </p>
 						<div class="spotlight_image">
 							<img src="img/portfolio-email-tool-1.png" alt="">
 						</div>
 					</div>
 
-					<div class="spotlight_item" data-height="800">
+					<div class="spotlight_item">
 						<span>Recruitment / Sweepstakes Module </span>
-						<p></p>
+						<p>This project serves an important marketing goal, the recruitment of prospective customers. ASP .Net C# is used to digest an configurable XML file,generate html that displays the campaign's creative content and form fields, and collect user data.  </p>
 						<div class="spotlight_image">
 							<img src="img/portfolio-sweepstakes-1.png" alt="">
 						</div>
@@ -105,39 +106,14 @@
 			<div class="email">
 				<div class="email_inner">
 					<div class="email_intro">Interested in working together? </div>
-					<form action="http://formspree.io/AndyMagill@Gmail.com" method="POST">
-						<input type="email" name="_replyto" placeholder="email address">
-						<textarea name="body" placeholder="message" rows="4" ></textarea>
+					<form id="contact_form" action="http://formspree.io/AndyMagill@Gmail.com" method="POST">
+						<input type="email" name="_replyto" placeholder="email address" required >
+						<textarea name="body" placeholder="message" rows="4" required ></textarea>
+						<input type="hidden" name="_next" value="#thanks" />
+						<input type="hidden" name="_subject" value="Github Contact Form Submission" />
 						<input class="send" type="submit" value="send">
 					</form>
 				</div>
-			</div>
-
-			<div class="quotes">
-				<blockquote>
-					<p>If you're naturally kind, you attract a lot of people you don't like. </p>
-					<footer>- William Feather</footer>
-				</blockquote>
-
-				<blockquote>
-					<p>Common sense is the collection of prejudices acquired by age eighteen. </p>
-					<footer>- Albert Einstein</footer>
-				</blockquote>
-
-				<blockquote>
-					<p>All my life, I always wanted to be somebody. Now I see that I should have been more specific. </p>
-					<footer>- Jane Wagner</footer>
-				</blockquote>
-
-				<blockquote>
-					<p>Happiness is having a large, loving, caring, close-knit family in another city. </p>
-					<footer>- George Burns</footer>
-				</blockquote>
-
-				<blockquote>
-					<p>I am certain there is too much certainty in the world. </p>
-					<footer>- Michael Crichton</footer>
-				</blockquote>
 			</div>
 		</footer>
 	</div>
