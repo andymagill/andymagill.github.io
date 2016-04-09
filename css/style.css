@@ -15,16 +15,14 @@ html {
 }
 
 body {
-	min-height: 100%;
-	margin: 0;
-}
 
-body {
-	background: url(../img/wood-lg.jpg) no-repeat top center fixed #2f313d;
+	background: url(../img/wood-lg.jpg) no-repeat top center fixed #554633;
 	color: #F8FAEF;
 	font-family: 'Roboto', sans-serif;
 	font-weight: 300;
 	font-size: 16px;
+	min-height: 100%;
+	margin: 0;
 	text-align: center;
 }
 .wrapper {
@@ -61,7 +59,6 @@ nav a {
 	background-color: rgba(0,0,0,0);
 	color: #F8FAEF;
 	display: block;
-	float: left;
 	font-size: 18px;
 	font-weight: 500;
 	padding: 8px 20px;
@@ -172,19 +169,6 @@ nav a:hover {
 	margin: 0 auto;
 	border: 1px solid #2B2D42;
 }
-.quotes {
-	text-align: center;
-	margin-top: 40px;
-}
-.quotes blockquote {
-	display: none;
-}
-.quotes blockquote:nth-child(1) {
-	display: block;
-}
-.quotes blockquote p {
-	font-style: italic;
-}
 .email {
 	text-align: center;
 	clear:both;
@@ -241,6 +225,10 @@ nav a:hover {
 	background-color: rgba(0, 0, 0, .2);
 	transition: .4s;
 }
+.email .form_success {
+	display: none;
+	margin-bottom: 160px;
+}
 
 ::-webkit-input-placeholder {  
    color: #7F7F89;  
@@ -264,16 +252,53 @@ nav a:hover {
 }
 
 
-/*@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 768px) {
 
-	.portfolio_item {
-		width:44%;
+	body {
+		background: url(../img/wood-sm.jpg) no-repeat top center fixed #554633;
+		font-size: 14px;
 	}
-
-	.portfolio_item:hover ,
-	.portfolio_item.selected {
-		width:47%;
-		transition: .2s;
-		margin: -6px 1.5% 30px -1.5%;
+	.title {
+		float: none;
+		text-align: center;
+    	width: 100%;
 	}
-}*/
+	.title h1 ,
+	.title h2 {
+		margin: 0 auto;
+	}
+	.title h1 {
+		font-size: 44px;
+	}
+	.title h2 {
+		font-size: 17px;
+	}
+	nav {
+		float: none;
+		margin-top: 40px;
+		text-align: center;
+	}
+	nav a {
+		display: inline-block;
+		margin: 0 auto;
+	}
+	.welcome {
+		font-size: 16px;
+	}
+	.portfolio h3 {
+		font-size: 24px;
+	}
+	.portfolio_item span {
+		font-size: 12px;
+	}
+	.spotlight_item span {
+		font-size: 16px;
+	}
+	.spotlight_item a {
+		font-size: 14px;
+	}
+	.email_inner {
+		margin: initial;
+		width: 90%;
+	}
+}
