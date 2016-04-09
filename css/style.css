@@ -62,9 +62,12 @@ nav a {
 	font-size: 18px;
 	font-weight: 500;
 	padding: 8px 20px;
-	margin: 0 15px 0 0;
+	margin: 4px 15px 0 0;
 	transition: .4s;
 	text-decoration: none;
+}
+nav a.first {
+	margin-top: 0;
 }
 nav a:hover {
 	background-color: rgba(0, 0, 0, .5);
