@@ -1,3 +1,4 @@
+
 /*
 	Andrew Magill's Personal Website "Greetings Earthlings" CSS document
 	Author: Andrew Magill
@@ -15,7 +16,6 @@ html {
 }
 
 body {
-
 	background: url(../img/wood-lg.jpg) no-repeat top center fixed #554633;
 	color: #F8FAEF;
 	font-family: 'Roboto', sans-serif;
@@ -187,7 +187,8 @@ nav a:hover {
 	text-align: center;
 	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.75);
 }
-.email input , textarea {
+.email input , 
+.email textarea {
 	background: rgba(256, 256, 256, .75);
 	border: 4px solid transparent;
 	color: #000;
@@ -204,7 +205,8 @@ nav a:hover {
 	-webkit-box-sizing:content-box; 
 	box-sizing:content-box;
 }
-.email input:focus , textarea:focus {
+.email input:focus ,
+.email textarea:focus {
 	border: 4px solid #F8FAEF;
 }
 .email textarea {
@@ -252,6 +254,8 @@ nav a:hover {
 }
 
 
+/* Mobile Rendering  ####################################################### */
+
 @media only screen and (max-width: 768px) {
 
 	body {
@@ -261,7 +265,7 @@ nav a:hover {
 	.title {
 		float: none;
 		text-align: center;
-    	width: 100%;
+		width: 100%;
 	}
 	.title h1 ,
 	.title h2 {

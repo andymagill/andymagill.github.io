@@ -1,3 +1,4 @@
+
 /* 
 	Andrew Magill's Personal Website "Greetings Earthlings" JS document
 	Author: Andrew Magill
@@ -44,8 +45,10 @@ $(document).ready(function() {
 
 	// display form success message
 	if (window.location.hash == "#thanks") {
-		$('.email_inner').hide('500', function(){
-			$('.form_success').show('500');
+		$("html, body").animate({ scrollTop: $(document).height()-$(window).height() }, 200, function(){
+			$('.email_inner').hide(500, function(){
+				$('.form_success').show(500);
+			});
 		});
 	}
 });
