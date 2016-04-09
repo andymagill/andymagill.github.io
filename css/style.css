@@ -133,33 +133,35 @@ nav a:hover {
 }
 .spotlight {
 	clear: both;
-	border-bottom: 4px solid #F8FAEF;
+	background-color: rgba(248,250,239,0.9);
+	color: #2B2D42;
+	padding: 20px;
+
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
 }
 .spotlight_item {
 	display: none;
 	position: relative;
 	top: 0;
 	overflow: hidden;
-	border-top: 4px solid #F8FAEF;
+	margin: 8px 12px;
 }
 .spotlight_item span {
 	display: block;
 	font-family: 'Roboto Slab', serif;
 	font-weight: normal;
 	font-size: 23px;
-	margin: 20px 0;
-	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.75);
 }
 .spotlight_item p {
-	text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.9);
-	width: 50%;
+	
 }
 .spotlight_item a {
+	color: #2B2D42;
 	display: block;
-	color: #F8FAEF;
 	font-size: 17px;
 	font-weight: normal;
-	text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.75);
 }
 .spotlight_image{
 	text-align: center;
@@ -168,6 +170,7 @@ nav a:hover {
 .spotlight_image img{
 	width: 90%;
 	margin: 0 auto;
+	border: 1px solid #2B2D42;
 }
 .quotes {
 	text-align: center;
