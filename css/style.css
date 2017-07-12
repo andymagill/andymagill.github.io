@@ -16,8 +16,8 @@ html {
 }
 
 body {
-	background: url(../img/wood-lg.jpg) no-repeat top center fixed #554633;
-	color: #F8FAEF;
+	/*background: url(../img/wood-lg.jpg) no-repeat top center fixed #554633;*/
+	color: #bd6054;
 	font-family: 'Roboto', sans-serif;
 	font-weight: 300;
 	font-size: 16px;
@@ -25,31 +25,136 @@ body {
 	margin: 0;
 	text-align: center;
 }
+
+#canvas_container {
+	position: fixed;
+}
 .wrapper {
-	margin: 0 auto;
-	max-width: 980px;
+	position: absolute;
 	width: 100%;
-	padding: 0 20px 40px 20px;
+    margin: 0 auto;
+    /*max-width: 1281px;*/
+
 	text-align: left;
+
+	left: 0;
+	right: 0;
 }
-.title {
-	float: left;
-	margin-top: 30px;
-	width: 75%;
-}
+
 h1, h2 , h3 {
-	font-family: 'Roboto Slab', serif;
 	font-weight: normal;
 	margin: 0;
-	text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.75);
 }
+strong {
+	font-family: 'Roboto Slab', serif;
+}
+
+.welcome_text {
+	width: 50vw; 
+	float: left; 
+	margin: 6vw 0 0 6vw;
+	padding: 2vw 3vw; 
+
+	color: #bd6054;
+	font-size: 1.25vw;
+	background-color: rgba(255, 255, 245, 0.75); 
+	border: 1.4vw solid #bd6054;
+}
+.profile {
+	width: 25vw; 
+	float: right; 
+	margin: 6vw 6vw 2vw 0; 
+	border: 2vw solid #ff915b; 
+	padding: 1.5vw; 
+	background-color: rgba(255, 255, 245, 0.5)
+}
+.profile img {
+	width: 100%; 
+	max-width: 100%;
+
+	-moz-transition: all 0.3s;
+	-webkit-transition: all 0.3s;
+	transition: all 0.3s;
+}
+.profile:hover img {
+  -moz-transform: scale(1.15);
+  -webkit-transform: scale(1.15);
+  transform: scale(1.15);
+}
+
+.links {
+	float: left;
+    margin: 1vw 0 0 6vw;
+
+	font-family: 'Roboto Slab', serif;
+    font-weight: bold;
+    font-size: 1.5vw;
+}
+.links a {
+	float: left; 
+	display: block; 
+
+	background-color: rgba(255, 250, 245, 0.8); 
+	color:#E8495C; 
+	border: 1vw solid #E8495C; 
+	padding: 0.5vw 2vw 0.5vw 2vw; 
+	margin-right: 1vw;
+	text-decoration: none;
+	text-transform: lowercase;
+}
+a:hover {
+	opacity: 0.7;
+}
+
+.links a.tab {
+	background-color: #E8495C; 
+	color: white; padding: 0.5vw 2vw 1.5vw 2vw; 
+	float: left; 
+	margin-right: 1vw;
+}
+.top_links a {
+	margin-bottom: 1vw;
+}
+
+.fragment_container{
+	float: left;
+	width: 87vw;  
+	margin: 0 0 6vw 6vw; 
+
+	background-color: rgba(255, 255, 245, 0.70); 
+	border: 1vw solid #E8495C;
+}
+.fragment_container section{
+	display: none;
+}
+
+#resume object{
+    width: 100%;
+    height: 90vh;
+    max-height: 3300px;
+}
+
+#projects h3{
+	display: none;
+}
+
+/*
 h1 {
 	font-size: 67px;
 	font-weight: 300;
 }
+h1 a {
+	color: #F8FAEF;
+	text-decoration: none;
+}
 h2 {
 	font-size: 20px;
 }
+*/
+
+/* Nav */
+/*
+
 nav {
 	float: right;
 	margin-top: 62px;
@@ -72,14 +177,18 @@ nav a.first {
 nav a:hover {
 	background-color: rgba(0, 0, 0, .5);
 	transition: .4s;
-}
+}*/
+
+/*
 .welcome {
 	clear: both;
 	padding: 25px 0;
 	font-size: 20px;
-	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 	line-height: 170%;
-}
+}*/
+
+
+/* Portfolio */
 .thumbnails {
 	margin-bottom: 20px;
 }
@@ -91,7 +200,8 @@ nav a:hover {
 	float:left;
 	position: relative;
 	width:22%;
-	margin-right: 3%;
+	margin-left: 1.5%;
+	margin-right: 1.5%;
 	text-align: center;
 	transition: .2s;
 	margin-bottom: 40px;
@@ -105,28 +215,29 @@ nav a:hover {
 }
 .portfolio_item img {
 	width: 100%;
-	border: 12px double #F8FAEF;
+	border: 1vw solid #f18f63;
 }
 .portfolio_item a {
 	width:100%;
 	text-decoration: none;
-	color: #F8FAEF;
 }
 .portfolio_item span {
 	display: block;
 	position: absolute;
 	bottom: 0;
 	left: 0;
-	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.75);
 	font-weight: 500;
 	width: 100%;
 	height: 30px;
 }
-.portfolio_item:hover ,
 .portfolio_item.selected {
-	width:24%;
+/*	width:24%;
 	transition: .2s;
-	margin: -6px 2% 0 -1%;
+	margin: -6px 2% 0 -1%;*/
+}
+.portfolio_item.selected img{
+	border: 1vw solid #E8495C;
+
 }
 .portfolio_item.last:hover {
 	margin-right: 0;
@@ -169,35 +280,43 @@ nav a:hover {
 }
 .spotlight_image img{
 	width: 90%;
+	max-width: 110vh;
 	margin: 0 auto;
 	border: 1px solid #2B2D42;
 }
-.email {
+
+/* Contact form */
+#email {
 	text-align: center;
 	clear:both;
 	padding-top: 20px;
 }
 .email_inner {
-	width: 250px;
+	width: 70vw;
 	margin: 0 auto;
 	text-align: left;
 }
-.email .email_intro {
+#email #contact_form {
+	float: right;
+    width: 35vw;
+}
+#email .email_intro {
+	float: left;
+	margin-bottom: 5px;
+
 	font-family: 'Roboto Slab', serif;
 	font-weight: normal;
-	font-size: 16px;
-	margin-bottom: 5px;
+	font-size: 1.5vw;
 	text-align: center;
-	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.75);
 }
-.email input , 
-.email textarea {
+#email input , 
+#email textarea {
 	background: rgba(256, 256, 256, .75);
-	border: 4px solid transparent;
+	border: 4px solid #663333;
 	color: #000;
 	display: block;
 	font-family: Helvetica, Arial, sans-serif;
-	font-size: 14px;
+	font-size: 1.2vw;
 	margin: 5px 0;
 	outline: none;
 	padding: 8px 10px;
@@ -208,17 +327,17 @@ nav a:hover {
 	-webkit-box-sizing:content-box; 
 	box-sizing:content-box;
 }
-.email input:focus ,
-.email textarea:focus {
-	border: 4px solid #F8FAEF;
+#email input:focus ,
+#email textarea:focus {
+	border: 4px solid #66333;
 }
-.email textarea {
+#email textarea {
 	resize: none;
 }
-.email .send {
+#email .send {
 	background-color: transparent;
-	border: 4px solid #F8FAEF;
-	color: #F8FAEF;
+	border: 4px solid #663333;
+	color: #663333;
 	font-family: 'Roboto', sans-serif;
 	font-size: 18px;
 	padding: 6px 10px;
@@ -226,11 +345,11 @@ nav a:hover {
 	cursor: pointer;
 	transition: .4s;
 }
-.email .send:hover {
+#email .send:hover {
 	background-color: rgba(0, 0, 0, .2);
 	transition: .4s;
 }
-.email .form_success {
+#email .form_success {
 	display: none;
 	margin-bottom: 160px;
 }
@@ -256,11 +375,88 @@ nav a:hover {
   color: #FFF;
 }
 
+/* Profile picture animation */
+
+.animated {
+  	-webkit-animation-fill-mode: both;
+	  -moz-animation-fill-mode: both;
+	  -ms-animation-fill-mode: both;
+	  -o-animation-fill-mode: both;
+	  animation-fill-mode: both;
+  	-webkit-animation-duration: 1.5s;
+  	-moz-animation-duration: 1.5s;
+  	-ms-animation-duration: 1.5s;
+	  -o-animation-duration: 1.5s;
+	  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes shake {
+	  0%, 100% {-webkit-transform: translate(0, 0);}
+	  10%, 50%, 90% {-webkit-transform: translate(-10px,-10px);}
+	  20%, 60% {-webkit-transform: translate(10px),-10px);}
+	  30%, 70% {-webkit-transform: translate(10px),10px);}
+	  40%, 80% {-webkit-transform: translate(-10px),10px);}
+}
+
+@-moz-keyframes shake {
+  	0%, 100% {-moz-transform: translate(0, 0);}
+	  10%, 50%, 85% {-moz-transform: translate(-10px),-10px);}
+	  20%, 60%, 90% {-moz-transform: translate(10px,-10px);}
+	  30%, 70%, 95% {-moz-transform: translate(10px,10px);}
+	  40%, 75% {-moz-transform: translate(-10px,10px);}
+}
+
+@-o-keyframes shake {
+	  0%, 100% {-o-transform: translate(0, 0);}
+	  10%, 50%, 90% {-o-transform: translate(-10px,-10px);}
+	  20%, 60% {-o-transform: translate(10px,-10px);}
+	  30%, 70% {-o-transform: translate(10px,10px);}
+	  40%, 80% {-o-transform: translate(-10px,10px);}
+}
+
+@keyframes shake {
+	  0%, 100% {transform: translate(0, 0) scale(1, 1);}
+	  10%, 35%, 60%, 80%{transform: translate(-10px),-10px) scale(0.9, 1);}
+	  15%, 40%, 64%, 84%{transform: translate(0px,-10px) scale(1, 0.9);}
+	  20%, 45%, 68%, 88%{transform: translate(10px,0px) scale(1.1, 1);}
+	  25%, 50%, 72%, 92%{transform: translate(-10px,10px) scale(0.9, 1);}
+	  30%, 55%, 76%, 96%{transform: translate(10px,-10px) scale(1.1, 0.9);}
+}
+
+.shake {
+	  -webkit-animation-name: shake;
+	  -moz-animation-name: shake;
+  	  -o-animation-name: shake;
+	  animation-name: shake;
+}
+
+/* Hi-Res Rendering  ####################################################### */
+
+@media only screen and (min-width: 1750px) {
+
+	.wrapper {
+		width: 1750px;
+	}
+	.welcome_text {
+		width:870px;
+		margin: 100px 0 0 100px;
+		padding: 35px 52px;
+		font-size: 22px;
+    	border: 25px solid #bd6054;
+	}
+	.profile {
+	    width: 435px;
+	    margin: 100px 100px 35px 0;
+	    border: 35px solid #ff915b;
+	    padding: 25px;
+	}
+
+}
 
 /* Mobile Rendering  ####################################################### */
 
 @media only screen and (max-width: 768px) {
-
+/*
 	body {
 		background: url(../img/wood-sm.jpg) no-repeat top center fixed #554633;
 		font-size: 14px;
@@ -307,5 +503,5 @@ nav a:hover {
 	.email_inner {
 		margin: initial;
 		width: 90%;
-	}
+	}*/
 }
