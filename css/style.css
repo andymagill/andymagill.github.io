@@ -1,6 +1,6 @@
 
 /*
-	Andrew Magill's Personal Website "Greetings Earthlings" CSS document
+	Andrew Magill's Portfolio CSS document
 	Author: Andrew Magill
 */
 
@@ -16,7 +16,6 @@ html {
 }
 
 body {
-	/*background: url(../img/wood-lg.jpg) no-repeat top center fixed #554633;*/
 	color: #bd6054;
 	font-family: 'Roboto', sans-serif;
 	font-weight: 300;
@@ -32,8 +31,7 @@ body {
 .wrapper {
 	position: absolute;
 	width: 100%;
-    margin: 0 auto;
-    /*max-width: 1281px;*/
+	margin: 0 auto;
 
 	text-align: left;
 
@@ -50,45 +48,44 @@ strong {
 }
 
 .welcome_text {
-	width: 50vw; 
+	width: 50%; 
 	float: left; 
 	margin: 6vw 0 0 6vw;
 	padding: 2vw 3vw; 
 
 	color: #bd6054;
 	font-size: 1.25vw;
-	background-color: rgba(255, 255, 245, 0.75); 
+	background-color: rgba(255, 250, 245, 0.75); 
 	border: 1.4vw solid #bd6054;
 }
 .profile {
-	width: 25vw; 
+	width: 25%; 
 	float: right; 
 	margin: 6vw 6vw 2vw 0; 
 	border: 2vw solid #ff915b; 
 	padding: 1.5vw; 
-	background-color: rgba(255, 255, 245, 0.5)
+	background-color: rgba(255, 250, 245, 0.5)
 }
 .profile img {
-	width: 100%; 
-	max-width: 100%;
+	width: 100%;
 
 	-moz-transition: all 0.3s;
 	-webkit-transition: all 0.3s;
 	transition: all 0.3s;
 }
-.profile:hover img {
+/*.profile:hover img {
   -moz-transform: scale(1.15);
   -webkit-transform: scale(1.15);
   transform: scale(1.15);
-}
+}*/
 
 .links {
 	float: left;
-    margin: 1vw 0 0 6vw;
+	margin: 1vw 0 0 6vw;
 
 	font-family: 'Roboto Slab', serif;
-    font-weight: bold;
-    font-size: 1.5vw;
+	font-weight: bold;
+	font-size: 1.5vw;
 }
 .links a {
 	float: left; 
@@ -102,13 +99,17 @@ strong {
 	text-decoration: none;
 	text-transform: lowercase;
 }
+a {
+	color: #c9367f;
+}
 a:hover {
 	opacity: 0.7;
 }
 
 .links a.tab {
 	background-color: #E8495C; 
-	color: white; padding: 0.5vw 2vw 1.5vw 2vw; 
+	color: #fffaf5;
+	padding: 0.5vw 2vw 1.5vw 2vw; 
 	float: left; 
 	margin-right: 1vw;
 }
@@ -121,170 +122,93 @@ a:hover {
 	width: 87vw;  
 	margin: 0 0 6vw 6vw; 
 
-	background-color: rgba(255, 255, 245, 0.70); 
-	border: 1vw solid #E8495C;
 }
 .fragment_container section{
 	display: none;
 }
-
-#resume object{
-    width: 100%;
-    height: 90vh;
-    max-height: 3300px;
+.fragment_container #email{
+	float: left;
+	width: 100%;
+	background-color: #E8495C;
+	color: #fffaf5;
+	padding: 4vw 0;
 }
-
+.fragment_container #projects{
+	border: 1vw solid #E8495C;
+	background-color: rgba(255, 250, 245, 0.70); 
+}
+.fragment_container #resume{
+	background-color: #9ea2a6;
+	border: 1vw solid #E8495C;
+}
+#resume object{
+	width: 100%;
+	height: 90vh;
+	max-height: 3300px;
+}
+#projects {
+	float: left;
+	width: 100%;
+}
 #projects h3{
 	display: none;
 }
-
-/*
-h1 {
-	font-size: 67px;
-	font-weight: 300;
+.thumbnail {
+	float: left;
+	width: 12vw;
+	margin-right: 2vw;
+	border: 1px solid white;
 }
-h1 a {
-	color: #F8FAEF;
-	text-decoration: none;
-}
-h2 {
-	font-size: 20px;
-}
-*/
-
-/* Nav */
-/*
-
-nav {
-	float: right;
-	margin-top: 62px;
-}
-nav a {
-	border: 4px solid #F8FAEF;
-	background-color: rgba(0,0,0,0);
-	color: #F8FAEF;
-	display: block;
-	font-size: 18px;
-	font-weight: 500;
-	padding: 8px 20px;
-	margin: 4px 15px 0 0;
-	transition: .4s;
-	text-decoration: none;
-}
-nav a.first {
-	margin-top: 0;
-}
-nav a:hover {
-	background-color: rgba(0, 0, 0, .5);
-	transition: .4s;
-}*/
-
-/*
-.welcome {
-	clear: both;
-	padding: 25px 0;
-	font-size: 20px;
-	line-height: 170%;
-}*/
-
-
-/* Portfolio */
-.thumbnails {
-	margin-bottom: 20px;
-}
-.portfolio h3 {
-	margin-bottom: 20px;
-	font-size: 30px;
+.portfolio {
+	float: left;
+	width: 100%;
 }
 .portfolio_item {
-	float:left;
-	position: relative;
-	width:22%;
-	margin-left: 1.5%;
-	margin-right: 1.5%;
-	text-align: center;
-	transition: .2s;
-	margin-bottom: 40px;
-	padding-bottom: 50px;
-}
-.portfolio_item.last {
-	margin-right: 0;
-}
-.portfolio_item.last::after {
 	clear: both;
-}
-.portfolio_item img {
+	float: left;
+	border-bottom: 1px solid #E8495C;
 	width: 100%;
-	border: 1vw solid #f18f63;
 }
 .portfolio_item a {
-	width:100%;
 	text-decoration: none;
-}
-.portfolio_item span {
 	display: block;
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	font-weight: 500;
+	float: left;
 	width: 100%;
-	height: 30px;
+	padding: 2vw;
+	font-size: 1.4vw;
 }
-.portfolio_item.selected {
-/*	width:24%;
-	transition: .2s;
-	margin: -6px 2% 0 -1%;*/
+.portfolio_item a:hover .portfolio_title {
+	text-decoration: underline;
 }
-.portfolio_item.selected img{
-	border: 1vw solid #E8495C;
-
+.portfolio_item a:hover {
+	background-color: #fff;
 }
-.portfolio_item.last:hover {
-	margin-right: 0;
+.selected ,
+.selected a:hover  {
+	background-color: #E8495C;
 }
-.spotlight {
-	clear: both;
-	background-color: rgba(248,250,239,0.9);
-	color: #2B2D42;
-	padding: 20px;
-
-	-webkit-border-radius: 20px;
-	-moz-border-radius: 20px;
-	border-radius: 20px;
+.selected .portfolio_title ,
+.selected .portfolio_desc  ,
+.selected .portfolio_tech {
+	color: #fff;
 }
-.spotlight_item {
-	display: none;
-	position: relative;
-	top: 0;
-	overflow: hidden;
-	margin: 8px 12px;
+.portfolio_details {
+	float: left;
 }
-.spotlight_item span {
-	display: block;
+.portfolio_title {
+	color: #E8495C;
 	font-family: 'Roboto Slab', serif;
-	font-weight: normal;
-	font-size: 23px;
+	font-weight: bold;
 }
-.spotlight_item p {
-	
+.portfolio_tech {
+	float: right;
 }
-.spotlight_item a {
-	color: #2B2D42;
-	display: block;
-	font-size: 17px;
-	font-weight: normal;
+.portfolio_desc {
+	color:#bd6054;
 }
-.spotlight_image{
-	text-align: center;
-	margin: 20px 0 30px 0;
+.portfolio_image img {
+	width: 100%;
 }
-.spotlight_image img{
-	width: 90%;
-	max-width: 110vh;
-	margin: 0 auto;
-	border: 1px solid #2B2D42;
-}
-
 /* Contact form */
 #email {
 	text-align: center;
@@ -292,28 +216,36 @@ nav a:hover {
 	padding-top: 20px;
 }
 .email_inner {
-	width: 70vw;
+	width: 70%;
 	margin: 0 auto;
 	text-align: left;
 }
 #email #contact_form {
 	float: right;
-    width: 35vw;
+	width: 25vw;
 }
 #email .email_intro {
 	float: left;
 	margin-bottom: 5px;
+	width: 40%;
+}
+.email_intro strong {
 
 	font-family: 'Roboto Slab', serif;
 	font-weight: normal;
-	font-size: 1.5vw;
-	text-align: center;
+	font-size: 1.6vw;
+}
+.email_intro p {
+
+	font-family: 'Roboto', sans-serif;
+	font-weight: normal;
+	font-size: 1.4vw;
 }
 #email input , 
 #email textarea {
-	background: rgba(256, 256, 256, .75);
-	border: 4px solid #663333;
-	color: #000;
+	background: rgba(256, 256, 256, .2);
+	border: 4px solid rgb(256, 256, 245);
+	color: #ffffff;
 	display: block;
 	font-family: Helvetica, Arial, sans-serif;
 	font-size: 1.2vw;
@@ -327,6 +259,38 @@ nav a:hover {
 	-webkit-box-sizing:content-box; 
 	box-sizing:content-box;
 }
+#email input , 
+#email textarea {
+	background: #ef7381;
+	border: 4px solid #fffaf5;
+	color: #ffffff;
+	display: block;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 1.2vw;
+	margin: 5px 0;
+	outline: none;
+	padding: 8px 10px;
+	width: 100%;
+
+	-ms-box-sizing:content-box;
+	-moz-box-sizing:content-box;
+	-webkit-box-sizing:content-box; 
+	box-sizing:content-box;
+}
+
+#email input::-webkit-input-placeholder , 
+#email textarea::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: pink;
+}
+#email input:-ms-input-placeholder , 
+#email textarea :-ms-input-placeholder { /* IE 10+ */
+  color: pink;
+}
+#email input:-moz-input-placeholder , 
+#email textarea :-moz-placeholder { /* Firefox  */
+  color: pink;
+}
+
 #email input:focus ,
 #email textarea:focus {
 	border: 4px solid #66333;
@@ -336,8 +300,8 @@ nav a:hover {
 }
 #email .send {
 	background-color: transparent;
-	border: 4px solid #663333;
-	color: #663333;
+	border: 4px solid rgb(256, 256, 245);
+	color: rgb(256, 256, 245);
 	font-family: 'Roboto', sans-serif;
 	font-size: 18px;
 	padding: 6px 10px;
@@ -378,14 +342,14 @@ nav a:hover {
 /* Profile picture animation */
 
 .animated {
-  	-webkit-animation-fill-mode: both;
+	-webkit-animation-fill-mode: both;
 	  -moz-animation-fill-mode: both;
 	  -ms-animation-fill-mode: both;
 	  -o-animation-fill-mode: both;
 	  animation-fill-mode: both;
-  	-webkit-animation-duration: 1.5s;
-  	-moz-animation-duration: 1.5s;
-  	-ms-animation-duration: 1.5s;
+	-webkit-animation-duration: 1.5s;
+	-moz-animation-duration: 1.5s;
+	-ms-animation-duration: 1.5s;
 	  -o-animation-duration: 1.5s;
 	  animation-duration: 1.5s;
 }
@@ -399,7 +363,7 @@ nav a:hover {
 }
 
 @-moz-keyframes shake {
-  	0%, 100% {-moz-transform: translate(0, 0);}
+	0%, 100% {-moz-transform: translate(0, 0);}
 	  10%, 50%, 85% {-moz-transform: translate(-10px),-10px);}
 	  20%, 60%, 90% {-moz-transform: translate(10px,-10px);}
 	  30%, 70%, 95% {-moz-transform: translate(10px,10px);}
@@ -426,7 +390,7 @@ nav a:hover {
 .shake {
 	  -webkit-animation-name: shake;
 	  -moz-animation-name: shake;
-  	  -o-animation-name: shake;
+	  -o-animation-name: shake;
 	  animation-name: shake;
 }
 
@@ -434,74 +398,51 @@ nav a:hover {
 
 @media only screen and (min-width: 1750px) {
 
-	.wrapper {
-		width: 1750px;
-	}
-	.welcome_text {
-		width:870px;
-		margin: 100px 0 0 100px;
-		padding: 35px 52px;
-		font-size: 22px;
-    	border: 25px solid #bd6054;
-	}
-	.profile {
-	    width: 435px;
-	    margin: 100px 100px 35px 0;
-	    border: 35px solid #ff915b;
-	    padding: 25px;
-	}
-
 }
 
 /* Mobile Rendering  ####################################################### */
 
 @media only screen and (max-width: 768px) {
-/*
-	body {
-		background: url(../img/wood-sm.jpg) no-repeat top center fixed #554633;
-		font-size: 14px;
+	.wrapper {
+
 	}
-	.title {
-		float: none;
-		text-align: center;
+	.welcome_text { 
+		width: 88vw;
+		max-width: 88%;
+		margin: 5vw 0 0 5vw;
+		font-size: 2.2vw;
+		border: 2vw solid #bd6054;
+	}
+	.links {
+		margin: 14vw 0 0 5vw;
+		font-size: 3vw;
+	}
+	.profile {
+		margin-top: 2vw;
+	}
+	.fragment_container {
+		margin: 0 0 5vw 5vw;
+	}
+	.portfolio_item a {
+		font-size: 2.5vw;
+	}
+	.thumbnail {
+		width: 25vw;
+	}
+	#email .email_intro {
 		width: 100%;
 	}
-	.title h1 ,
-	.title h2 {
-		margin: 0 auto;
+	.email_intro strong {
+		font-size: 4vw;
 	}
-	.title h1 {
-		font-size: 44px;
+	.email_intro p {
+		font-size: 3vw;
 	}
-	.title h2 {
-		font-size: 17px;
-	}
-	nav {
-		float: none;
-		margin-top: 40px;
-		text-align: center;
-	}
-	nav a {
-		display: inline-block;
-		margin: 0 auto;
-	}
-	.welcome {
-		font-size: 16px;
-	}
-	.portfolio h3 {
-		font-size: 24px;
-	}
-	.portfolio_item span {
-		font-size: 12px;
-	}
-	.spotlight_item span {
-		font-size: 16px;
-	}
-	.spotlight_item a {
-		font-size: 14px;
-	}
-	.email_inner {
-		margin: initial;
+	#email #contact_form {
+		float: none; 
 		width: 90%;
-	}*/
+	}
+	#email input, #email textarea {
+	font-size: 3vw;
+	}
 }
