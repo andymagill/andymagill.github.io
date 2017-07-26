@@ -1,6 +1,6 @@
 
 /* 
-	Andrew Magill's Personal Website "Greetings Earthlings" JS document
+	Andrew Magill's Portfolio JS document
 	Author: Andrew Magill
 */
 
@@ -8,12 +8,10 @@ var ge = {}
 ge.spotlight_anim_speed = 500;
 
 $(document).ready(function() {
-	function showFragment(){
-		console.log(window.location.hash);
 
-		// $('html, body').animate({
-	 //       scrollTop: $(this).offset().top
-	 //    }, 2000);
+	// Deep linking
+	function showFragment(){
+
 		$('.btm_links a.tab').removeClass('tab');
 		$('.fragment_container section').hide();
 		$('.fragment_container '+window.location.hash).show();
@@ -33,19 +31,17 @@ $(document).ready(function() {
 	});
 	showFragment();
 
-
-    $('.profile').on('click', '', function(){
-    	$(this).addClass('animated shake');
-    });
-
 	$('#resume_nav').click( function(){
 
 		window.location.hash = 'resume';
 	});
 
-	$('.btm_links a').click( function(){
-	});
+	// dumb profile pic animation
+    $('.profile').on('click', '', function(){
+    	$(this).addClass('animated shake');
+    });
 
+    // Portfolio accordion 
 	var allPanels = $('.portfolio_item > .portfolio_details').hide();
     
 	$('.portfolio_item > a').click(function() {
@@ -61,42 +57,6 @@ $(document).ready(function() {
 
 	return false;
 	});
-
-	// $('.portfolio_item a').click(function() {
-
-	// 	var $portfolio_item_a = $(this);
-
-
-	// 	$portfolio_item_a.siblings('.portfolio_details').slideUp(ge.spotlight_anim_speed, function() {
-	// 		//console.log('click');
-	// 		$('.portfolio_item').removeClass('selected');
-	// 		$portfolio_item_a.parent('.portfolio_item').addClass('selected');
-	// 		$portfolio_item_a.siblings( '.portfolio_details' ).slideToggle(ge.spotlight_anim_speed);
-	// 	});
-
-
-	// 	// // get the indexes of the elements we want to animate
-	// 	// var portfolio_index = $(this).parent('.portfolio_item').index();
-	// 	// var visible_index = $('.spotlight_item:visible').index();
-
-	// 	// // toggle the clicked item as 'selected'
-	// 	// $(this).parent('.portfolio_item').toggleClass('selected');
-
-	// 	// // hide the visible element
-	// 	// $('.spotlight_item').slideUp(ge.spotlight_anim_speed, function() {
-	// 	// 	$('.portfolio_item:eq('+visible_index+')').removeClass('selected');
-	// 	// });
-
-	// 	// // If the element we want to animate is not the one we just hid,
-	// 	// if (visible_index != portfolio_index) {
-
-	// 	// 	// animate the element
-	// 	// 	var spotlight_elem = '.spotlight_item:eq('+portfolio_index+')';
-	// 	// 	$(spotlight_elem).slideToggle(ge.spotlight_anim_speed);
-	// 	// }
-
-	// 	return false;
-	// });
 
 	// form validation
 	$("#contact_form").validate({
@@ -131,7 +91,6 @@ var bgAnim = function() {
 	var windowHalfY = window.innerHeight / 2;
 
 	$(function() {
-	    console.log( document.getElementById('canvas_container'));
 		init();
 		animate();
 	});
@@ -169,10 +128,6 @@ var bgAnim = function() {
 				context.fillStyle = _color.getStyle();
 				context.fill();
 				context.stroke();
-
-
-
-
 
 		};
 
@@ -226,7 +181,6 @@ var bgAnim = function() {
 
 
 		window.addEventListener( 'resize', onWindowResize, false );
-
 	}
 
 	function onWindowResize() {
@@ -238,7 +192,6 @@ var bgAnim = function() {
 		camera.updateProjectionMatrix();
 
 		renderer.setSize( window.innerWidth, window.innerHeight );
-
 	}
 
 	function onDocumentMouseMove( event ) {
@@ -255,9 +208,7 @@ var bgAnim = function() {
 
 			mouseX = event.touches[ 0 ].pageX - windowHalfX;
 			mouseY = event.touches[ 0 ].pageY - windowHalfY;
-
 		}
-
 	}
 
 	function onDocumentTouchMove( event ) {
@@ -268,17 +219,13 @@ var bgAnim = function() {
 
 			mouseX = event.touches[ 0 ].pageX - windowHalfX;
 			mouseY = event.touches[ 0 ].pageY - windowHalfY;
-
 		}
-
 	}
 
 	function animate() {
 
 		requestAnimationFrame( animate );
-
 		render();
-
 	}
 
 	function render() {
@@ -291,7 +238,6 @@ var bgAnim = function() {
 		group.rotation.y += 0.002;
 
 		renderer.render( scene, camera );
-
 	}
 }
 
