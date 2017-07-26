@@ -194,6 +194,7 @@ a:hover {
 }
 .portfolio_details {
 	float: left;
+	width: 100%;
 }
 .portfolio_title {
 	color: #E8495C;
