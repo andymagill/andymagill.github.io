@@ -37,13 +37,13 @@ $(document).ready(function() {
 	});
 
 	// dumb profile pic animation
-    $('.profile').on('click', '', function(){
-    	$(this).addClass('animated shake');
-    });
+	$('.profile').on('click', '', function(){
+		$(this).addClass('animated shake');
+	});
 
-    // Portfolio accordion 
+	// Portfolio accordion 
 	var allPanels = $('.portfolio_item > .portfolio_details').hide();
-    
+
 	$('.portfolio_item > a').click(function() {
 
 		$('.portfolio_item').removeClass('selected');
